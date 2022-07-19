@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Magnify from "../assets/magnifying.png";
+import Magnify from "../assets/magnifyingthick.png";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import Navlinks from "../subcomponents/navlinks";
@@ -18,31 +18,22 @@ const Nav = () => {
           </div>
         </Link>
 
-            <div className="user">
-            <FontAwesomeIcon className="user__icon" icon="fa-solid fa-circle-user" />
-            <p className="user__para">My Pages</p>
-            <FontAwesomeIcon icon="fa-solid fa-angle-down" />
-            </div>
+        <ul className="interaction__container">
+          <li className="interaction">
+            <p className="search__para">HOW TO HELP</p>
+          </li>
+          <li className="interaction">
+            <p className="search__para">REPORT CRUELTY</p>
+          </li>
 
-        <div className="nav__search">
-          <input
-            className="search"
-            type="text"
-            placeholder="Find your lifetime companion breed..."
-          ></input>
-          <button className="search__btn">
-            <img className="search__icon" src={Magnify} alt="" />
-          </button>
-        </div>
+          <li className="interaction">
+            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+            <p className="search__para">SEARCH</p>
+          </li>
+        </ul>
       </div>
-      <div className="nav__container--lower">
-      <hr className="linebreak" />
-      <div className="nav__links--container">
 
       <Navlinks></Navlinks>
-      </div>
-      <hr className="linebreak__lower" />
-      </div>
     </nav>
   );
 };
