@@ -57,10 +57,12 @@ const Gallery = () => {
       {img ? (
         <>
           <AliceCarousel 
-          mouseTracking items= {items}
-          autoPlay={true}
+          mouseTracking ={false}
+          items= {items}
+          autoPlay
           autoPlayInterval={3000}
-          infinite={true}
+          infinite
+          animationDuration={1500}
           
           />
         </>
