@@ -6,7 +6,7 @@ import Img1 from "../assets/dog1.jpg"
 
 
 
-const handleDragStart = (e) => e.preventDefault();
+
 
 const items = [
   <div className="item pic--one" data-value="1">
@@ -57,9 +57,8 @@ const Gallery = () => {
       {img ? (
         <>
           <AliceCarousel 
-            mouseTracking items={items}
-            mouseTracking = {false}
-         autoPlay={true}
+          mouseTracking items= {items}
+          autoPlay={true}
           autoPlayInterval={3000}
           infinite={true}
           
