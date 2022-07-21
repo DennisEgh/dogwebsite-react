@@ -59,9 +59,9 @@ const Gallery = () => {
           <AliceCarousel 
             mouseTracking items={items}
             mouseTracking = {false}
-       //   autoPlay={true}
-        //  autoPlayInterval={3000}
-         // infinite={true}
+         autoPlay={true}
+          autoPlayInterval={3000}
+          infinite={true}
           
           />
         </>
