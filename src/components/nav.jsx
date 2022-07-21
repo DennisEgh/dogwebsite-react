@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Magnify from "../assets/magnifyingthick.png";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import Navlinks from "../subcomponents/navlinks";
