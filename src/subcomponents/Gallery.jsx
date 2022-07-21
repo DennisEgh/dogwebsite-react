@@ -2,24 +2,40 @@ import React, { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "../index.css";
 import "react-alice-carousel/lib/alice-carousel.css";
-import Img1 from "../assets/logo.png";
-import Img2 from "../assets/playing.jpg";
-import Img3 from "../assets/dogs2.jpg";
+import Img1 from "../assets/dog1.jpg"
+
+
 
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <div className="item" data-value="1">
-    <img className="item--second" src={Img2} alt="" />
-    <h1 className="item--third">Hello</h1>
+  <div className="item pic--one" data-value="1">
+    <div className="item__content--wrapper--one">
+      <h1 className="item__title--one">Kindness <br />
+      & Care <br />
+       for <br />
+        Animals
+        </h1>
+
+        <p className="item__para--one">
+          Help us care for our best friends <br />
+           who've ran into bad luck <br />
+            and <span className="underline">NEED</span> our help.
+        </p>
+
+       <button className="item__button--one">Donate Now 
+       
+       </button>
+    </div>
   </div>,
 
-  <div className="item" data-value="2">
-    <img className="item--second" src={Img2} alt="" />
+  <div className="item pic--two" data-value="2">
+   <div className="item__content--wrapper--two"></div>
   </div>,
 
-  <div className="item" data-value="3">
-    <img className="item--second" src={Img2} alt="" />
+  <div className="item pic--three" data-value="3">
+    <div className="item__content--wrapper--three"></div>
+    
   </div>,
 ];
 
@@ -28,7 +44,7 @@ const Gallery = () => {
 
   useEffect(() => {
     const image = new Image();
-    image.src = Img2;
+    image.src = Img1;
     image.onload = () => {
       setTimeout(() => {
         setImg(image);
@@ -40,7 +56,14 @@ const Gallery = () => {
     <>
       {img ? (
         <>
-          <AliceCarousel mouseTracking items={items} />
+          <AliceCarousel 
+            mouseTracking items={items}
+            mouseTracking = {false}
+       //   autoPlay={true}
+        //  autoPlayInterval={3000}
+         // infinite={true}
+          
+          />
         </>
       ) : (
         <> 

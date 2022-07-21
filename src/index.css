@@ -104,12 +104,12 @@ nav {
   padding-left: 10px;
 }
 .shop__container {
-  width: 250px;
-  height: 50px;
+  max-width: 270px;
+  height: 55px;
   background-color: rgb(153, 255, 0);
   position: relative;
-  left: 61.5%;
-  top: -39px;
+  left: 62%;
+  top: -44px;
   transition: all 300ms ease;
   cursor: pointer;
 }
@@ -120,7 +120,7 @@ nav {
   display: flex;
   position: relative;
   top: 25%;
-  left: 25%;
+  left: 29%;
   width: 100%;
   max-width: 100px;
   gap: 20px;
@@ -182,40 +182,98 @@ font-size: 30px;
 /* LANDING PARE */
 
 #landing-page{
-  height: 100vh;
   width: 100%;
 }
-
-
-.alice-carousel{
-  height: 500px;
-  
-}
-
 .alice-carousel__wrapper{
-  height: 500px !important;
+  height: 650px !important;
 }
-
-
-img{
-  object-fit: cover;
+.item{
   width: 100%;
-}
+  height: 100%;
 
-.item--second{
-  position: relative;
 }
-.item--third{
-  color: #242424;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.item::before{
+  content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
 }
-
+.pic--one{
+  background-image: url(./assets/dog1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.pic--two{
+  background-image: url(./assets/dog2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.pic--three{
+  background-image: url(./assets/dog3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 .skeleton{
   width: 100%;
-  max-width: 250px;
-  height: 320px;
+  height: 655px;
   background-color: rgb(204, 204, 204);
   margin-bottom: 8px;
+}
+.alice-carousel__dots{
+  position: relative;
+  top: -100px;
+}
+.alice-carousel__prev-btn, .alice-carousel__next-btn{
+  display: none !important;
+}
+.alice-carousel__dots-item{
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.item__content--wrapper--one{
+  height: 75%;
+  position: relative;
+  top: 12.5%;
+  left: 25%;
+  z-index: 2;
+}
+.item__title--one{
+  font-size: 74px;
+  color: white;
+  line-height: 0.9em !important;
+  padding-bottom: 20px;
+}
+.item__para--one{
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+.underline{
+  text-decoration: underline;
+}
+.item__button--one{
+  background-color: yellow;
+  border: none;
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 30%);
+  transition: all 300ms ease;
+}
+.item__button--one:hover{
+  cursor: pointer;
+  background-color: rgb(153, 255, 0);
+  transform: scale(1.1);
 }
