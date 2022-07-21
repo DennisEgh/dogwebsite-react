@@ -29,6 +29,10 @@ const Nav = () => {
             <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
             <p className="search__para">SEARCH</p>
           </li>
+          <li className="interaction">
+          <FontAwesomeIcon icon="fa-solid fa-circle-user" />
+            <p className="search__para">LOG IN</p>
+          </li>
         </ul>
       </div>
 
