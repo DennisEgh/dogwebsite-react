@@ -5,14 +5,13 @@ import { Link } from "react-router-dom";
 import Navlinks from "../subcomponents/navlinks";
 import Modal from "../subcomponents/Modal";
 
-
 const Nav = () => {
   function openSearch() {
     let element = document.querySelector(".interaction__container");
     element.classList.toggle("search__active");
   }
 
-    function openLogIn() {
+  function openLogIn() {
     document.body.classList.toggle("menu--open");
   }
 
@@ -87,9 +86,11 @@ const Nav = () => {
         <Navlinks></Navlinks>
         <Modal></Modal>
       </nav>
-      <div className="nav__bg"></div>
+      <div
+        onClick={() => document.body.classList.remove("menu--open")}
+        className="nav__bg"
+      ></div>
     </>
   );
 };
 export default Nav;
-
