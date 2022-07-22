@@ -15,7 +15,7 @@ function Covid() {
           </div>
           <div className="covid__content">
             <p className="covid__para">
-              Learn more about our efforts to prevent the <br />
+              Learn more about our efforts to prevent the 
               spread of Coronavirus.
             </p>
             <Link className="covid__anchor" to="/">
