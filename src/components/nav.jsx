@@ -14,6 +14,23 @@ function openSearch(){
   element.classList.toggle("search__active");
 }
 
+const searching = () =>{
+
+  let input = document.querySelector(".search__input")
+  
+  return input.value
+}
+
+const handleKeyPress = (event) =>{
+  if(event.key === 'Enter'){
+    console.log(searching())
+  }
+}
+
+
+
+
+
 
 
   return (
@@ -48,7 +65,7 @@ function openSearch(){
 
             
             <FontAwesomeIcon onClick={openSearch} icon="fa-solid fa-circle-xmark" />
-            <input className="search__input" type="text" placeholder="What are you looking for?"
+            <input onKeyPress={handleKeyPress} className="search__input" type="text" placeholder="What are you looking for?"
             />
             
             
