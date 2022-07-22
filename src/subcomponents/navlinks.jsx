@@ -27,12 +27,15 @@ const Navlinks = () => {
               </Link>
             </li>
             </div>
+            <Link className="shop__anchor" to="/store">
+
             <div className="shop__container">
               <div className="shop__content">
                 <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
                 <p className="shop__para">SHOP</p>
               </div>
             </div>
+            </Link>
           </ul>
         </div>
       </div>
