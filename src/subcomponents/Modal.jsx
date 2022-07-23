@@ -12,9 +12,13 @@ function Modal({ user, setUser }) {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        document.querySelector(".login").classList.add("login__inactive");
-        document.querySelector(".logout").classList.add("logout__active");
         
+        document.querySelector(".fa-circle").classList.add("login__inactive");
+          document.querySelector(".fa-circle-user").classList.add("logout__active");
+      }
+      if (!user){
+        document.querySelector(".fa-circle").classList.remove("login__inactive");
+        document.querySelector(".fa-circle-user").classList.remove("logout__active");
       }
     });
   });
@@ -111,13 +115,13 @@ function Modal({ user, setUser }) {
     let passwordValue = document.querySelector(".input__password-login").value;
     signInWithEmailAndPassword(auth, emailValue, passwordValue)
       .then(({ user }) => {
-        console.log(user.email);
         setUser(user.email);
         buttonPointerEvent();
         setTimeout(() => {
           document.body.classList.remove("menu--open");
           document.querySelector(".login").classList.add("login__inactive");
           document.querySelector(".logout").classList.add("logout__active");
+          
           clearInputField();
         }, 500);
       })

@@ -114,6 +114,9 @@ nav {
 .search__active .fa-circle-xmark {
   display: block;
 }
+.fa-circle-user {
+  display: none;
+}
 .search__input {
   transition: all 300ms ease;
   opacity: 0;
@@ -133,14 +136,14 @@ nav {
   top: -5px;
   transition: all 300ms ease;
 }
-.logout{
+.logout {
   display: none;
 }
-.login__inactive{
-display: none;
+.login__inactive {
+  display: none !important;
 }
-.logout__active{
-  display: block;
+.logout__active {
+  display: block !important;
 }
 .fa-circle-xmark {
   display: none;
@@ -151,7 +154,7 @@ display: none;
   cursor: pointer;
   z-index: 2;
 }
-.user__icon{
+.user__icon {
   font-size: 20px;
   position: relative;
   left: -5px;
@@ -162,9 +165,7 @@ display: none;
   width: 17px;
   color: white;
   background-color: rgb(153, 255, 0);
-  
 }
-
 
 .nav__container--lower {
   width: 100%;
@@ -209,7 +210,8 @@ display: none;
 .shop__container {
   width: 100%;
   max-width: 270px;
-
+  position: relative;
+  left: 11px;
   height: 55px;
   background-color: rgb(153, 255, 0);
   box-shadow: 0 0 5px rgb(0 0 0 / 30%);
@@ -336,7 +338,6 @@ display: none;
 .modal__title {
   font-weight: 600;
   font-size: 40px;
-  
 }
 .modal__wrapper {
   display: flex;
@@ -352,7 +353,7 @@ display: none;
 .form__username {
   padding-top: 35px;
   border-bottom: 1px black solid;
-  
+
   position: relative;
 }
 
@@ -375,6 +376,7 @@ display: none;
 .fa-user {
   font-size: 20px;
   position: relative;
+
   top: 25px;
 }
 .fa-lock {
@@ -403,34 +405,32 @@ display: none;
 .login__btn:hover {
   transform: scale(1.025);
 }
-input[type="password"]{
+input[type="password"] {
   font-size: 20px;
 }
-.login__reset{
+.login__reset {
   position: relative;
   left: 71.5%;
   cursor: pointer;
-transition: all 300ms ease;
-width: 115px;
+  transition: all 300ms ease;
+  width: 115px;
 }
-.login__reset:hover{
+.login__reset:hover {
   text-decoration: underline;
 }
-.create__user--container{
+.create__user--container {
   display: flex;
   justify-content: center;
   margin-top: 30%;
-  
 }
-.create__user{
+.create__user {
   font-size: 14px;
 }
-.green{
+.green {
   color: rgb(153, 255, 0);
   cursor: pointer;
-  
 }
-.green:hover{
+.green:hover {
   text-decoration: underline;
 }
 
@@ -449,11 +449,11 @@ width: 115px;
   font-size: 32px;
   cursor: pointer;
 }
-.register--xmark{
+.register--xmark {
   left: 6.25rem;
 }
 
-.register{
+.register {
   opacity: 0;
   visibility: hidden;
   transition: all 300ms ease;
@@ -461,55 +461,54 @@ width: 115px;
 
 .register--open .register,
 .register--open .nav__bg,
-.register--open .modal__bg
-{
+.register--open .modal__bg {
   opacity: 1;
   visibility: visible;
 }
-.success{
-position: relative;
-top: 40px;
-font-size: 16px;
-text-align: center;
-display: none;
-}
-.fail{
-position: relative;
-top: 40px;
-font-size: 16px;
-text-align: center;
-color: red;
-display: none;
-}
-.fail__email{
-display: none;
-position: relative;
-color: red;
-top: 40px;
-font-size: 16px;
-text-align: center;
-}
-.loginfail{
+.success {
+  position: relative;
+  top: 40px;
+  font-size: 16px;
+  text-align: center;
   display: none;
-position: relative;
-color: red;
-top: 40px;
-font-size: 16px;
-text-align: center;
 }
-.success__active.success{
+.fail {
+  position: relative;
+  top: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: red;
+  display: none;
+}
+.fail__email {
+  display: none;
+  position: relative;
+  color: red;
+  top: 40px;
+  font-size: 16px;
+  text-align: center;
+}
+.loginfail {
+  display: none;
+  position: relative;
+  color: red;
+  top: 40px;
+  font-size: 16px;
+  text-align: center;
+}
+.success__active.success {
   display: block;
 }
-.fail__active.fail{
+.fail__active.fail {
   display: block;
 }
-.failemail__active.fail__email{
+.failemail__active.fail__email {
   display: block;
 }
-.loginfail__active.loginfail{
+.loginfail__active.loginfail {
   display: block;
 }
-.noInteraction.login__btn{
+.noInteraction.login__btn {
   pointer-events: none !important;
 }
 /* LANDING PARE */

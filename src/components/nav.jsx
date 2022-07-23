@@ -32,9 +32,14 @@ const Nav = () => {
   };
   function logout() {
     signOut(auth);
-    setUser({});
-    document.querySelector(".login").classList.remove("login__inactive");
-    document.querySelector(".logout").classList.remove("logout__active");
+    setUser();
+    
+
+      document.querySelector(".login").classList.remove("login__inactive");
+      document.querySelector(".logout").classList.remove("logout__active");
+    
+    
+   
   }
 
   return (
@@ -87,6 +92,7 @@ const Nav = () => {
                   onClick={openLogIn}
                   icon="fa-solid fa-circle-user"
                 />
+                <FontAwesomeIcon icon="fa-solid fa-circle" />
                 <p onClick={openLogIn} className="search__para login">
                   LOG IN
                 </p>

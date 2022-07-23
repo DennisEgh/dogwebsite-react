@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faCartShopping, faCircleUser, faAngleDown, faMagnifyingGlass, faCircleXmark, faXmark, faUser, faLock} from '@fortawesome/free-solid-svg-icons'
+import {faCartShopping, faCircleUser, faAngleDown, faMagnifyingGlass, faCircleXmark, faXmark, faUser, faLock, faCircle} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faCartShopping, faCircleUser, faAngleDown, faMagnifyingGlass, faCircleXmark, faXmark, faUser, faLock)
+library.add(faCartShopping, faCircleUser, faAngleDown, faMagnifyingGlass, faCircleXmark, faXmark, faUser, faLock, faCircle)
  
 
 
