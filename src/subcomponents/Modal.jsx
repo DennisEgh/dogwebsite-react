@@ -10,8 +10,19 @@ function Modal() {
   const openRegister = () => {
     document.body.classList.toggle("register--open");
     document.body.classList.toggle("menu--open");
+    clearInputField();
   };
 
+  const clearInputField = () => {
+    let inputEmail = document.querySelector(".input__email-login");
+    let inputPassword = document.querySelector(".input__password-login");
+    let inputEmailRegister = document.querySelector(".input__email");
+    let inputPasswordRegister = document.querySelector(".input__password");
+    inputEmail.value = "";
+    inputPassword.value = "";
+    inputEmailRegister.value = "";
+    inputPasswordRegister.value = "";
+  };
   const showSuccess = () => {
     let elementSuccess = document.querySelector(".success");
     elementSuccess.classList.add("success__active");
@@ -44,6 +55,27 @@ function Modal() {
     }, 4000);
   };
 
+  const showLoginFail = () => {
+    let elementFail = document.querySelector(".loginfail");
+    elementFail.classList.remove("loginfail__active");
+    setTimeout(() => {
+      elementFail.classList.add("loginfail__active");
+    }, 100);
+    setTimeout(() => {
+      elementFail.classList.remove("loginfail__active");
+    }, 4000);
+  };
+
+  const buttonPointerEvent = () => {
+    let element = document.querySelector(".register__btn");
+    let elementLogin = document.querySelector(".login__btn");
+    element.classList.add("noInteraction");
+    elementLogin.classList.add("noInteraction");
+    setTimeout(() => {
+      element.classList.remove("noInteraction");
+      elementLogin.classList.remove("noInteraction");
+    }, 4000);
+  };
   const register = () => {
     let emailValue = document.querySelector(".input__email").value;
     let passwordValue = document.querySelector(".input__password").value;
@@ -51,14 +83,14 @@ function Modal() {
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((user) => {
         if (passwordValue.length >= 6) {
+          buttonPointerEvent();
           showSuccess();
           console.log(user);
         }
       })
       .catch((error) => {
-        passwordValue.length < 6 ?
-        showFailPassword() : 
-        showFailEmail();
+        passwordValue.length < 6 ? showFailPassword() : showFailEmail();
+        buttonPointerEvent();
       });
   };
 
@@ -68,9 +100,15 @@ function Modal() {
     signInWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((user) => {
         console.log(user);
+        buttonPointerEvent();
+        setTimeout(() => {
+          document.body.classList.remove("menu--open");
+          clearInputField();
+        }, 500);
       })
       .catch((error) => {
-        console.log(error);
+        buttonPointerEvent();
+        showLoginFail();
       });
   };
 
@@ -119,6 +157,9 @@ function Modal() {
                   Log In
                 </button>
               </div>
+              <p className="loginfail">
+                Invalid Email or Password. Please try again.
+              </p>
               <div className="create__user--container">
                 <p className="create__user">
                   Don't have an account?{" "}
@@ -163,7 +204,7 @@ function Modal() {
               />
             </div>
             <div className="action__container">
-              <button onClick={register} className="login__btn">
+              <button onClick={register} className="login__btn register__btn">
                 Register
               </button>
             </div>
@@ -175,9 +216,10 @@ function Modal() {
               not been created.
             </p>
             <p className="fail__email">
-              Email faulty. Please enter a real email. Your account has not been
-              created.
+              Invalid Email. Please enter a real email. Your account has not
+              been created.
             </p>
+
             <div className="create__user--container">
               <p className="create__user">
                 Have an account?{" "}

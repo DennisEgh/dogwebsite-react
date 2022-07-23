@@ -466,6 +466,14 @@ top: 40px;
 font-size: 16px;
 text-align: center;
 }
+.loginfail{
+  display: none;
+position: relative;
+color: red;
+top: 40px;
+font-size: 16px;
+text-align: center;
+}
 .success__active.success{
   display: block;
 }
@@ -474,6 +482,12 @@ text-align: center;
 }
 .failemail__active.fail__email{
   display: block;
+}
+.loginfail__active.loginfail{
+  display: block;
+}
+.noInteraction.login__btn{
+  pointer-events: none !important;
 }
 /* LANDING PARE */
 
