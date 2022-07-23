@@ -1,13 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, {useState} from "react";
+import React from "react";
 import { auth } from "../firebase/init.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-function Modal() {
-const {user, setUser} = useState({});
+
+function Modal({user, setUser}) {
+  
 
   const openRegister = () => {
     document.body.classList.toggle("register--open");
@@ -100,16 +101,18 @@ const {user, setUser} = useState({});
     let emailValue = document.querySelector(".input__email-login").value;
     let passwordValue = document.querySelector(".input__password-login").value;
     signInWithEmailAndPassword(auth, emailValue, passwordValue)
-      .then((user) => {
-        console.log(user);
-        setUser(user);
+      .then(({user}) => {
+        console.log(user.email);
+        setUser(user.email);
         buttonPointerEvent();
         setTimeout(() => {
           document.body.classList.remove("menu--open");
           clearInputField();
         }, 500);
+        
       })
       .catch((error) => {
+        console.log(error)
         buttonPointerEvent();
         showLoginFail();
       });

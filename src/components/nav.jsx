@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -7,6 +7,8 @@ import Modal from "../subcomponents/Modal";
 
 
 const Nav = () => {
+  const [user, setUser] = useState()
+
   function openSearch() {
     let element = document.querySelector(".interaction__container");
     element.classList.toggle("search__active");
@@ -32,6 +34,7 @@ const Nav = () => {
     <>
       <nav>
         <div className="nav__container--upper">
+          
           <Link to="/">
             <div className="nav__logo--container">
               <figure className="nav__logo">
@@ -79,15 +82,16 @@ const Nav = () => {
                   icon="fa-solid fa-circle-user"
                 />
                 <p onClick={openLogIn} className="search__para">
-                  LOG IN
+                  LOG IN 
                   
                 </p>
+                
               </div>
             </li>
           </ul>
         </div>
         <Navlinks></Navlinks>
-        <Modal></Modal>
+        <Modal user={user} setUser={setUser}></Modal>
       </nav>
       <div
         onClick={() => document.body.classList.remove("menu--open", "register--open")}
