@@ -88,7 +88,7 @@ const Nav = () => {
         <Modal></Modal>
       </nav>
       <div
-        onClick={() => document.body.classList.remove("menu--open")}
+        onClick={() => document.body.classList.remove("menu--open", "register--open")}
         className="nav__bg"
       ></div>
     </>

@@ -396,7 +396,7 @@ width: 115px;
 .create__user--container{
   display: flex;
   justify-content: center;
-  margin-top: 35%;
+  margin-top: 30%;
   
 }
 .create__user{
@@ -426,7 +426,44 @@ width: 115px;
   font-size: 32px;
   cursor: pointer;
 }
+.register--xmark{
+  left: 6.25rem;
+}
 
+.register{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
+}
+
+.register--open .register,
+.register--open .nav__bg,
+.register--open .modal__bg
+{
+  opacity: 1;
+  visibility: visible;
+}
+.success{
+position: relative;
+top: 40px;
+font-size: 16px;
+text-align: center;
+display: none;
+}
+.fail{
+position: relative;
+top: 40px;
+font-size: 16px;
+text-align: center;
+color: red;
+display: none;
+}
+.success__active.success{
+  display: block;
+}
+.fail__active.fail{
+  display: block;
+}
 /* LANDING PARE */
 
 #landing-page {
