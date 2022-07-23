@@ -12,15 +12,18 @@ function Modal({ user, setUser }) {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        
+        document.querySelector(".login").classList.add("login__inactive");
+        document.querySelector(".logout").classList.add("logout__active");
         document.querySelector(".fa-circle").classList.add("login__inactive");
           document.querySelector(".fa-circle-user").classList.add("logout__active");
       }
       if (!user){
         document.querySelector(".fa-circle").classList.remove("login__inactive");
         document.querySelector(".fa-circle-user").classList.remove("logout__active");
+        document.querySelector(".login").classList.remove("login__inactive");
+        document.querySelector(".logout").classList.remove("logout__active");
       }
-    });
+    }, []);
   });
 
   const openRegister = () => {

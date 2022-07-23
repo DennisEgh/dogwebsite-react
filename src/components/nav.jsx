@@ -34,9 +34,12 @@ const Nav = () => {
     signOut(auth);
     setUser();
     
+    if(user){
 
       document.querySelector(".login").classList.remove("login__inactive");
+
       document.querySelector(".logout").classList.remove("logout__active");
+    }
     
     
    
