@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navlinks from "../subcomponents/navlinks";
 import Modal from "../subcomponents/Modal";
 
+
 const Nav = () => {
   function openSearch() {
     let element = document.querySelector(".interaction__container");
@@ -79,6 +80,7 @@ const Nav = () => {
                 />
                 <p onClick={openLogIn} className="search__para">
                   LOG IN
+                  
                 </p>
               </div>
             </li>

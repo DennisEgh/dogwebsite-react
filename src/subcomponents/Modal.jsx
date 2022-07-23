@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, {useState} from "react";
 import { auth } from "../firebase/init.js";
 import {
   createUserWithEmailAndPassword,
@@ -7,6 +7,8 @@ import {
 } from "firebase/auth";
 
 function Modal() {
+const {user, setUser} = useState({});
+
   const openRegister = () => {
     document.body.classList.toggle("register--open");
     document.body.classList.toggle("menu--open");
@@ -100,6 +102,7 @@ function Modal() {
     signInWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((user) => {
         console.log(user);
+        setUser(user);
         buttonPointerEvent();
         setTimeout(() => {
           document.body.classList.remove("menu--open");
