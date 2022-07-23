@@ -68,6 +68,7 @@ const Nav = () => {
                 className="search__input"
                 type="text"
                 placeholder="What are you looking for?"
+                spellCheck="false"
               />
             </li>
             <li className="interaction">
