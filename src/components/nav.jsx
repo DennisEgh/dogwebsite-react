@@ -1,13 +1,14 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import Navlinks from "../subcomponents/navlinks";
 import Modal from "../subcomponents/Modal";
-
+import { auth } from "../firebase/init.js";
+import { signOut } from "firebase/auth";
 
 const Nav = () => {
-  const [user, setUser] = useState()
+  const [user, setUser] = useState();
 
   function openSearch() {
     let element = document.querySelector(".interaction__container");
@@ -29,12 +30,17 @@ const Nav = () => {
       console.log(searching());
     }
   };
+  function logout() {
+    signOut(auth);
+    setUser({});
+    document.querySelector(".login").classList.remove("login__inactive");
+    document.querySelector(".logout").classList.remove("logout__active");
+  }
 
   return (
     <>
       <nav>
         <div className="nav__container--upper">
-          
           <Link to="/">
             <div className="nav__logo--container">
               <figure className="nav__logo">
@@ -81,11 +87,12 @@ const Nav = () => {
                   onClick={openLogIn}
                   icon="fa-solid fa-circle-user"
                 />
-                <p onClick={openLogIn} className="search__para">
-                  LOG IN 
-                  
+                <p onClick={openLogIn} className="search__para login">
+                  LOG IN
                 </p>
-                
+                <p onClick={logout} className="search__para logout">
+                  LOG OUT
+                </p>
               </div>
             </li>
           </ul>
@@ -94,7 +101,9 @@ const Nav = () => {
         <Modal user={user} setUser={setUser}></Modal>
       </nav>
       <div
-        onClick={() => document.body.classList.remove("menu--open", "register--open")}
+        onClick={() =>
+          document.body.classList.remove("menu--open", "register--open")
+        }
         className="nav__bg"
       ></div>
     </>

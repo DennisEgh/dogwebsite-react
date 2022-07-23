@@ -133,6 +133,15 @@ nav {
   top: -5px;
   transition: all 300ms ease;
 }
+.logout{
+  display: none;
+}
+.login__inactive{
+display: none;
+}
+.logout__active{
+  display: block;
+}
 .fa-circle-xmark {
   display: none;
   position: relative;
@@ -142,6 +151,20 @@ nav {
   cursor: pointer;
   z-index: 2;
 }
+.user__icon{
+  font-size: 20px;
+  position: relative;
+  left: -5px;
+  top: -5px;
+  font-weight: 600;
+  height: 20px;
+  border-radius: 2px;
+  width: 17px;
+  color: white;
+  background-color: rgb(153, 255, 0);
+  
+}
+
 
 .nav__container--lower {
   width: 100%;
