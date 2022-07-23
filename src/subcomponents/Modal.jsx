@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { auth } from "../firebase/init.js";
 import {
   createUserWithEmailAndPassword,
