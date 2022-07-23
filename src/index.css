@@ -458,10 +458,21 @@ text-align: center;
 color: red;
 display: none;
 }
+.fail__email{
+display: none;
+position: relative;
+color: red;
+top: 40px;
+font-size: 16px;
+text-align: center;
+}
 .success__active.success{
   display: block;
 }
 .fail__active.fail{
+  display: block;
+}
+.failemail__active.fail__email{
   display: block;
 }
 /* LANDING PARE */

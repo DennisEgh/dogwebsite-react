@@ -11,23 +11,37 @@ function Modal() {
     document.body.classList.toggle("register--open");
     document.body.classList.toggle("menu--open");
   };
-  const changeToLogin = () => {
-    setTimeout(() => {
-      document.body.classList.remove("register--open");
-      document.body.classList.add("menu--open");
-    }, 7000);
-  };
+
   const showSuccess = () => {
     let elementSuccess = document.querySelector(".success");
     elementSuccess.classList.add("success__active");
+    setTimeout(() => {
+      elementSuccess.classList.remove("success__active");
+      document.body.classList.remove("register--open");
+      document.body.classList.add("menu--open");
+    }, 5000);
   };
-  const showFail = () => {
-    let elementFail = document.querySelector(".fail");
-    elementFail.classList.add("fail__active");
+
+  const showFailEmail = () => {
+    let elementFail = document.querySelector(".fail__email");
+    elementFail.classList.remove("failemail__active");
+    setTimeout(() => {
+      elementFail.classList.add("failemail__active");
+    }, 100);
+    setTimeout(() => {
+      elementFail.classList.remove("failemail__active");
+    }, 4000);
   };
-  const hideFail = () => {
+
+  const showFailPassword = () => {
     let elementFail = document.querySelector(".fail");
     elementFail.classList.remove("fail__active");
+    setTimeout(() => {
+      elementFail.classList.add("fail__active");
+    }, 100);
+    setTimeout(() => {
+      elementFail.classList.remove("fail__active");
+    }, 4000);
   };
 
   const register = () => {
@@ -36,22 +50,16 @@ function Modal() {
 
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((user) => {
-        console.log(user);
+        if (passwordValue.length >= 6) {
+          showSuccess();
+          console.log(user);
+        }
       })
-
       .catch((error) => {
-        console.log(error);
-        
+        passwordValue.length < 6 ?
+        showFailPassword() : 
+        showFailEmail();
       });
-
-    if (passwordValue.length >= 6) {
-    
-      hideFail();
-      showSuccess();
-      changeToLogin();
-    } else {
-      showFail();
-    }
   };
 
   const login = () => {
@@ -165,6 +173,10 @@ function Modal() {
             <p className="fail">
               Your password must be at least 6 characters long. Your account has
               not been created.
+            </p>
+            <p className="fail__email">
+              Email faulty. Please enter a real email. Your account has not been
+              created.
             </p>
             <div className="create__user--container">
               <p className="create__user">
