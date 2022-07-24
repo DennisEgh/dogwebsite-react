@@ -15,7 +15,7 @@ function Modal({ user, setUser }) {
         if (user) {
           setUser(user);
 
-          setTimeout(() => {
+       
             document.querySelector(".login").classList.add("login__inactive");
             document.querySelector(".logout").classList.add("logout__active");
             document
@@ -24,19 +24,19 @@ function Modal({ user, setUser }) {
             document
               .querySelector(".fa-circle-user")
               .classList.add("logout__active");
-          }, 2000);
+         
         }
         if (!user) {
           document.querySelector(".login").classList.remove("login__inactive");
           document.querySelector(".logout").classList.remove("logout__active");
-          setTimeout(() => {
+         
             document
               .querySelector(".fa-circle-user")
               .classList.remove("logout__active");
             document
               .querySelector(".fa-circle")
               .classList.remove("login__inactive");
-          }, 2000);
+          
         }
       },
       []
