@@ -134,7 +134,7 @@ function Modal({ user, setUser }) {
           
           document.querySelector(".action__para").classList.remove("login__inactive");
           document.querySelector(".fa-spinner").classList.remove("active");
-        }, 2100);
+        }, 2200);
       })
       .catch((error) => {
         console.log(error);
