@@ -9,21 +9,38 @@ import {
 
 function Modal({ user, setUser }) {
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        document.querySelector(".login").classList.add("login__inactive");
-        document.querySelector(".logout").classList.add("logout__active");
-        document.querySelector(".fa-circle").classList.add("login__inactive");
-          document.querySelector(".fa-circle-user").classList.add("logout__active");
-      }
-      if (!user){
-        document.querySelector(".fa-circle").classList.remove("login__inactive");
-        document.querySelector(".fa-circle-user").classList.remove("logout__active");
-        document.querySelector(".login").classList.remove("login__inactive");
-        document.querySelector(".logout").classList.remove("logout__active");
-      }
-    }, []);
+    onAuthStateChanged(
+      auth,
+      (user) => {
+        if (user) {
+          setUser(user);
+
+          setTimeout(() => {
+            document.querySelector(".login").classList.add("login__inactive");
+            document.querySelector(".logout").classList.add("logout__active");
+            document
+              .querySelector(".fa-circle")
+              .classList.add("login__inactive");
+            document
+              .querySelector(".fa-circle-user")
+              .classList.add("logout__active");
+          }, 2000);
+        }
+        if (!user) {
+          document.querySelector(".login").classList.remove("login__inactive");
+          document.querySelector(".logout").classList.remove("logout__active");
+          setTimeout(() => {
+            document
+              .querySelector(".fa-circle-user")
+              .classList.remove("logout__active");
+            document
+              .querySelector(".fa-circle")
+              .classList.remove("login__inactive");
+          }, 2000);
+        }
+      },
+      []
+    );
   });
 
   const openRegister = () => {
@@ -48,8 +65,7 @@ function Modal({ user, setUser }) {
     setTimeout(() => {
       elementSuccess.classList.remove("success__active");
       document.body.classList.remove("register--open");
-      document.body.classList.add("menu--open");
-    }, 5000);
+    }, 3500);
   };
 
   const showFailEmail = () => {
@@ -120,7 +136,9 @@ function Modal({ user, setUser }) {
       .then(({ user }) => {
         setUser(user.email);
         buttonPointerEvent();
-        document.querySelector(".action__para").classList.add("login__inactive");
+        document
+          .querySelector(".action__para")
+          .classList.add("login__inactive");
         document.querySelector(".fa-spinner").classList.add("active");
 
         setTimeout(() => {
@@ -128,11 +146,11 @@ function Modal({ user, setUser }) {
           document.querySelector(".login").classList.add("login__inactive");
           document.querySelector(".logout").classList.add("logout__active");
           clearInputField();
-          
         }, 2000);
         setTimeout(() => {
-          
-          document.querySelector(".action__para").classList.remove("login__inactive");
+          document
+            .querySelector(".action__para")
+            .classList.remove("login__inactive");
           document.querySelector(".fa-spinner").classList.remove("active");
         }, 2200);
       })
@@ -185,11 +203,8 @@ function Modal({ user, setUser }) {
               <p className="login__reset">Forgot Password?</p>
               <div className="action__container">
                 <button onClick={login} className="login__btn">
-                <FontAwesomeIcon icon="fa-solid fa-spinner" />
-                <div className="action__para">
-
-                  Log In
-                </div>
+                  <FontAwesomeIcon icon="fa-solid fa-spinner" />
+                  <div className="action__para">Log In</div>
                 </button>
               </div>
               <p className="loginfail">
@@ -244,7 +259,8 @@ function Modal({ user, setUser }) {
               </button>
             </div>
             <p className="success">
-              Success! Your account has been created. Switching to Log in...
+              Success! Your account has been created and been automatically
+              logged in.
             </p>
             <p className="fail">
               Your password must be at least 6 characters long. Your account has
@@ -259,7 +275,6 @@ function Modal({ user, setUser }) {
               <p className="create__user">
                 Have an account?{" "}
                 <span onClick={openRegister} className="green">
-                
                   Log In
                 </span>
               </p>

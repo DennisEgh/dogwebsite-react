@@ -33,6 +33,7 @@ const Nav = () => {
   function logout() {
     signOut(auth);
     setUser();
+    console.log(user)
     
     if(user){
 
