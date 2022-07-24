@@ -120,13 +120,21 @@ function Modal({ user, setUser }) {
       .then(({ user }) => {
         setUser(user.email);
         buttonPointerEvent();
+        document.querySelector(".action__para").classList.add("login__inactive");
+        document.querySelector(".fa-spinner").classList.add("active");
+
         setTimeout(() => {
           document.body.classList.remove("menu--open");
           document.querySelector(".login").classList.add("login__inactive");
           document.querySelector(".logout").classList.add("logout__active");
-          
           clearInputField();
-        }, 500);
+          
+        }, 2000);
+        setTimeout(() => {
+          
+          document.querySelector(".action__para").classList.remove("login__inactive");
+          document.querySelector(".fa-spinner").classList.remove("active");
+        }, 2100);
       })
       .catch((error) => {
         console.log(error);
@@ -177,7 +185,11 @@ function Modal({ user, setUser }) {
               <p className="login__reset">Forgot Password?</p>
               <div className="action__container">
                 <button onClick={login} className="login__btn">
+                <FontAwesomeIcon icon="fa-solid fa-spinner" />
+                <div className="action__para">
+
                   Log In
+                </div>
                 </button>
               </div>
               <p className="loginfail">
@@ -232,7 +244,7 @@ function Modal({ user, setUser }) {
               </button>
             </div>
             <p className="success">
-              Success! Your account has been created. Switching to Log in.
+              Success! Your account has been created. Switching to Log in...
             </p>
             <p className="fail">
               Your password must be at least 6 characters long. Your account has
@@ -247,6 +259,7 @@ function Modal({ user, setUser }) {
               <p className="create__user">
                 Have an account?{" "}
                 <span onClick={openRegister} className="green">
+                
                   Log In
                 </span>
               </p>

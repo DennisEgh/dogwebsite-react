@@ -145,6 +145,9 @@ nav {
 .logout__active {
   display: block !important;
 }
+.active{
+  display: inline-block !important;
+}
 .fa-circle-xmark {
   display: none;
   position: relative;
@@ -417,6 +420,21 @@ input[type="password"] {
 }
 .login__reset:hover {
   text-decoration: underline;
+}
+.fa-spinner{
+  display: none;
+  animation-name: spin;
+  animation-duration: 650ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
 .create__user--container {
   display: flex;
