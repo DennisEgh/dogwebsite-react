@@ -145,7 +145,7 @@ nav {
 .logout__active {
   display: block !important;
 }
-.active{
+.active {
   display: inline-block !important;
 }
 .fa-circle-xmark {
@@ -421,19 +421,19 @@ input[type="password"] {
 .login__reset:hover {
   text-decoration: underline;
 }
-.fa-spinner{
+.fa-spinner {
   display: none;
   animation-name: spin;
   animation-duration: 650ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
 }
 @keyframes spin {
   from {
-      transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .create__user--container {
@@ -719,4 +719,61 @@ input[type="password"] {
   cursor: pointer;
   background-color: rgb(153, 255, 0);
   transform: scale(1.1);
+}
+
+/* NAV DROPDOWN */
+.nav__link--dropdown {
+  width: 100vw;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 149px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(153, 255, 0);
+  transition: all 500ms ease;
+  max-height: 0px;
+  z-index: 1;
+}
+.adopt:hover .adopt__dropdown,
+.adopt:hover .adopt__square {
+  opacity: 1;
+  visibility: visible;
+  max-height: 300px;
+}
+
+.vet:hover .vet__dropdown,
+.vet:hover .vet__square {
+  opacity: 1;
+  visibility: visible;
+  max-height: 300px;
+}
+.pro-res:hover .pro-res__dropdown,
+.pro-res:hover .pro-res__square {
+  opacity: 1;
+  visibility: visible;
+  max-height: 300px;
+}
+
+.nav__link--square {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  position: absolute;
+
+  top: 140px;
+  transform: rotate(45deg);
+  transition: all 500ms ease;
+}
+.adopt__square {
+  margin-left: 26px;
+}
+.vet__square {
+  margin-left: 5.3%;
+}
+.pro-res__square {
+  margin-left: 7.4%;
 }
