@@ -52,12 +52,10 @@ const items = [
         Over 100 veterinarians, including <br />
         46 board-certified specialists, work <br />
         side by side to provide safe, <br />
-         compassionate, state-of-the-art <br />
+        compassionate, state-of-the-art <br />
         care.
       </p>
-      <button className="item__button btn__three">
-        Learn More
-      </button>
+      <button className="item__button btn__three">Learn More</button>
     </div>
   </div>,
 ];
@@ -69,9 +67,7 @@ const Gallery = () => {
     const image = new Image();
     image.src = Img1;
     image.onload = () => {
-      setTimeout(() => {
-        setImg(image);
-      }, 300);
+      setImg(image);
     };
   });
 
