@@ -54,7 +54,7 @@ function Hiring() {
             </div>
             <p className="hiring__para">
               Our monthly donors are always on the job, helping the dogs that
-              need help the most. Join a good cause today!
+              need it the most. Join a good cause. Become a PawMate!
             </p>
           </div>
         </div>
