@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import adoptable from "../assets/adoptabledogs.jpg";
 import dogvocate from "../assets/dogvocate.jpg";
 import wishlist from "../assets/wishlistdog.jpg";
+import dogtraining from "../assets/dogtraining.jpg"
+import spaydog from "../assets/spaydog.jpg"
+import community from "../assets/theoffice.jpg"
 
 const Navlinks = () => {
   return (
@@ -105,7 +108,123 @@ const Navlinks = () => {
                   <div className="nav__link--square vet__square"></div>
                 </Link>
 
-                <div className="nav__link--dropdown vet__dropdown"></div>
+                <div className="nav__link--dropdown vet__dropdown">
+                  <div className="columns">
+                    <div className="column__container">
+                      <div className="column column__one">
+                        <h1 className="column__title borderbot">SERVICES</h1>
+                        <ul className="column__one--lists">
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Texas
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              New York
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Washington DC
+                            </Link>
+                          </li>
+                          <li className="column__one--list">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              24/7 Emergency Service
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="column__container">
+                      <div className="column column__one">
+                        <h1 className="column__title borderbot">
+                          HOURS AND PATIENT INFO
+                        </h1>
+                        <ul className="column__one--lists">
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Appointment Hours
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Visiting Hours & Drop in
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Admissions and Payment Info
+                            </Link>
+                          </li>
+                          <li className="column__one--list">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Our Doctors
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="column__container">
+                      <div className="column column__one">
+                        <h1 className="column__title borderbot">
+                          EMERGENCY: WASHINGTON DC
+                        </h1>
+                        <ul className="column__one--lists">
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              512-821-9371
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Directions
+                            </Link>
+                          </li>
+                        
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="column__container">
+                      <div className="column column__one">
+                        <h1 className="column__title borderbot">
+                          EMERGENCY: TEXAS
+                        </h1>
+                        <ul className="column__one--lists">
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              617-562-7812
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                            <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Directtions
+                            </Link>
+                          </li>
+                          
+                         
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
               </li>
 
               <li className="nav__link pro-res">
@@ -114,7 +233,87 @@ const Navlinks = () => {
                   <div className="nav__link--square pro-res__square"></div>
                 </Link>
 
-                <div className="nav__link--dropdown pro-res__dropdown"></div>
+                <div className="nav__link--dropdown pro-res__dropdown">
+                  <div className="columns">
+                    <div className="column__container">
+                      <div className="column column__one">
+                        <ul className="column__one--lists">
+                          <li className="column__one--list borderbot">
+                          <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Pet Owner Resources
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                          <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Dog Advocacy
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                          <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Humane Education
+                            </Link>
+                          </li>
+                          <li className="column__one--list borderbot">
+                          <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Surrender a Dog
+                            </Link>
+                          </li>
+                          <li className="column__one--list">
+                          <FontAwesomeIcon icon="fa-solid fa-angle-right" />
+                            <Link to="/" className="column__one--anchor">
+                              Lost or Found a dog?
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="column__container">
+                      <div className="column column__two">
+                        <Link to="/" className="cover__img">
+                          <img className="column__img" src={dogtraining} alt="" />
+                          <h1 className="column__title column__title--special">
+                            DOG TRAINING & BEHAVIOR
+                          </h1>
+                          <p className="column__para">
+                            View all of our rewards-based training classes here.
+                          </p>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="column__container">
+                      <div className="column column__three">
+                        <Link to="/" className="cover__img">
+                          <img className="column__img" src={spaydog} alt="" />
+                          <h1 className="column__title column__title--special">
+                            SPAY & NEUTER PROGRAMS
+                          </h1>
+                          <p className="column__para">
+                            Help us help dogs in our community, and encourage
+                            others to do the same.{" "}
+                          </p>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="column__container">
+                      <div className="column column__four">
+                        <Link to="/" className="cover__img">
+                          <img src={community} alt="" className="column__img" />
+
+                          <h1 className="column__title column__title--special">
+                            PAWMATE C.A.R.E.S
+                          </h1>
+                          <p className="column__para">
+                            See how we're giving back to the community. Enroll in our monthly giftbasktet today for FREE.
+                          </p>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </div>
             <Link className="shop__anchor" to="/store">

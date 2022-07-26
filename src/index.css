@@ -188,10 +188,18 @@ nav {
 .nav__links--container {
   margin: 0 auto;
   width: 100%;
+  height: 31px;
+}
+.nav__links{
+  height: 100%;
+}
+.nav__link{
+  height: 100%;
 }
 .nav__link--list {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 .nav__link--wrapper {
   display: flex;
@@ -214,7 +222,7 @@ nav {
   width: 100%;
   max-width: 270px;
   position: relative;
-  left: -82px;
+  left: -5px;
   height: 55px;
   background-color: green;
   box-shadow: 0 0 10px 3px rgb(0 0 0 / 30%);
@@ -246,7 +254,7 @@ nav {
   font-weight: 400;
   transition: all 300ms ease;
   font-size: 17px;
-  height: 31px;
+  
 }
 .nav__link--anchor:hover {
   color: green;
@@ -638,6 +646,7 @@ input[type="password"] {
   cursor: pointer;
   background-color: green;
   transform: scale(1.1);
+  color: white;
 }
 .btn__two {
   width: 280px;
@@ -723,6 +732,7 @@ input[type="password"] {
   cursor: pointer;
   background-color: green;
   transform: scale(1.1);
+  color: white;
 }
 
 /* NAV DROPDOWN */
@@ -807,7 +817,24 @@ input[type="password"] {
   line-height: 1.5em;
   margin: 0 2%;
   width: 100%;
-    max-width: 21%;
+  max-width: 21%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
+  transition-delay: 300ms;
+    
+}
+.adopt:hover .column__container{
+  opacity: 1;
+  visibility: visible;
+}
+.vet:hover .column__container{
+  opacity: 1;
+  visibility: visible;
+}
+.pro-res:hover .column__container{
+  opacity: 1;
+  visibility: visible;
 }
 .column__one--list{
   font-size: 15px;
