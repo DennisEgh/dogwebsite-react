@@ -228,6 +228,8 @@ nav {
   box-shadow: 0 0 10px 3px rgb(0 0 0 / 30%);
   transition: all 300ms ease;
   cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .shop__container:hover .shop__para {
   text-decoration: underline;
@@ -549,9 +551,11 @@ input[type="password"] {
 }
 .alice-carousel {
   height: 650px !important;
+ 
 }
 .alice-carousel__wrapper {
   height: 650px !important;
+ 
 }
 .alice-carousel__dots-item:not(.__custom):hover,
 .alice-carousel__dots-item:not(.__custom).__active {
@@ -577,6 +581,7 @@ input[type="password"] {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  
 }
 .pic--two {
   background-image: url(./assets/dog2.jpg);
@@ -905,7 +910,8 @@ input[type="password"] {
   opacity: 0;
   transition: all 600ms ease;
   max-height: 0px;
-  border-radius: 8px;
+ border-bottom-left-radius: 8px;
+ border-bottom-right-radius: 8px;
   box-shadow: 0 0 10px 5px rgb(0 0 0 / 30%);
 
 }
@@ -948,4 +954,5 @@ opacity: 1;
 .report__dropdown{
   left: 14px;
   height: 150px;
+  text-align: center;
 }
