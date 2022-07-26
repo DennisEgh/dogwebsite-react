@@ -105,7 +105,7 @@ const Nav = () => {
                   </li>
                   <li className="interaction__list">
                     <Link className="interaction__title" to="/">
-                      REPORT ANIMAL CRUELTY.
+                      REPORT ANIMAL CRUELTY
                     </Link>
                   </li>
                 </ul>
