@@ -214,7 +214,7 @@ nav {
   width: 100%;
   max-width: 270px;
   position: relative;
-  left: 11px;
+  left: -82px;
   height: 55px;
   background-color: green;
   box-shadow: 0 0 5px rgb(0 0 0 / 30%);
@@ -797,11 +797,11 @@ input[type="password"] {
  font-weight: 700;
  padding-bottom: 10px;
     padding-top: 10px;
-   
-
+   line-height: 20px;
 }
+
 .borderbot{
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.62);
 }
 .column__container{
   line-height: 1.5em;
@@ -834,4 +834,32 @@ input[type="password"] {
     
     color: white;
    
+}
+.column__img{
+  
+  width: 100%;
+  
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+   
+    border: 1px solid rgba(255, 255, 255, 0.62);
+}
+.cover__img{
+  width: 100%;
+  position: relative;
+ 
+}
+
+.column__para{
+  font-size: 13px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: white;
+}
+.column__title--special{
+  padding-top: 0;
+}
+.column:hover .column__title--special{
+  text-decoration: underline;
 }

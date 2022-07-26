@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
+import adoptable from "../assets/adoptabledogs.jpg";
+import dogvocate from "../assets/dogvocate.jpg";
+import wishlist from "../assets/wishlistdog.jpg";
 
 const Navlinks = () => {
   return (
@@ -53,17 +56,43 @@ const Navlinks = () => {
 
                     <div className="column__container">
                       <div className="column column__two">
-                        <h1 className="column__title">SEARCH ADOPTABLE DOGS</h1>
+                        <Link to="/" className="cover__img">
+                          <img className="column__img" src={adoptable} alt="" />
+                          <h1 className="column__title column__title--special">
+                            SEARCH ADOPTABLE DOGS
+                          </h1>
+                          <p className="column__para">
+                            Give a dog the home they deserve. Find yours today.
+                          </p>
+                        </Link>
                       </div>
                     </div>
                     <div className="column__container">
                       <div className="column column__three">
-                        <h1 className="column__title">DOGVOCATES</h1>
+                        <Link to="/" className="cover__img">
+                          <img className="column__img" src={dogvocate} alt="" />
+                          <h1 className="column__title column__title--special">
+                            DOGVOCATES
+                          </h1>
+                          <p className="column__para">
+                            Help us help dogs in our community, and encourage
+                            others to do the same.{" "}
+                          </p>
+                        </Link>
                       </div>
                     </div>
                     <div className="column__container">
                       <div className="column column__four">
-                        <h1 className="column__title">WISHLIST</h1>
+                        <Link to="/" className="cover__img">
+                          <img src={wishlist} alt="" className="column__img" />
+
+                          <h1 className="column__title column__title--special">
+                            WISHLIST
+                          </h1>
+                          <p className="column__para">
+                            Donate dog care items to our Adoption Centers!
+                          </p>
+                        </Link>
                       </div>
                     </div>
                   </div>
