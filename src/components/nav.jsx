@@ -33,17 +33,13 @@ const Nav = () => {
   function logout() {
     signOut(auth);
     setUser();
-    console.log(user)
-    
-    if(user){
+    console.log(user);
 
+    if (user) {
       document.querySelector(".login").classList.remove("login__inactive");
 
       document.querySelector(".logout").classList.remove("logout__active");
     }
-    
-    
-   
   }
 
   return (
@@ -60,11 +56,60 @@ const Nav = () => {
           </Link>
 
           <ul className="interaction__container">
-            <li className="interaction">
+            <li className="interaction help">
+              <div className="interaction__dropdown">
+                <ul className="interaction__lists">
+                  <li className="interaction__list">
+                    <Link to="/" className="interaction__title">
+                      ADVOCATE FOR DOGS
+                    </Link>
+                  </li>
+                  <li className="interaction__list">
+                    <Link to="/" className="interaction__title">
+                      CONNECT WITH US
+                    </Link>
+                  </li>
+                  <li className="interaction__list">
+                    <Link className="interaction__title" to="/">
+                      VOLUNTEER
+                    </Link>
+                  </li>
+                  <li className="interaction__list">
+                    <Link className="interaction__title" to="/">
+                      START A FUNDRAISER
+                    </Link>
+                  </li>
+                  <li className="interaction__list">
+                    <Link to="/" className="interaction__title">
+                      UPCOMING FUNDRAISERS
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
               <p className="search__para">HOW TO HELP</p>
             </li>
-            <li className="interaction">
-              <p className="search__para">REPORT CRUELTY</p>
+            <li className="interaction report">
+              <div className="interaction__dropdown report__dropdown">
+                <ul className="interaction__lists">
+                  <li className="interaction__list">
+                    <Link className="interaction__title" to="/">
+                      WHAT IS ANIMAL CRUELTY?
+                    </Link>
+                  </li>
+                  <li className="interaction__list">
+                    <Link className="interaction__title" to="/">
+                      HUMANE EDUCATION
+                    </Link>
+                  </li>
+                  <li className="interaction__list">
+                    <Link className="interaction__title" to="/">
+                      REPORT ANIMAL CRUELTY.
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <p className="search__para report">REPORT CRUELTY</p>
             </li>
 
             <li className="interaction" id="search">
@@ -90,6 +135,7 @@ const Nav = () => {
                 spellCheck="false"
               />
             </li>
+
             <li className="interaction">
               <div className="interaction__container--user">
                 <FontAwesomeIcon
