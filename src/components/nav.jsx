@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -6,9 +6,36 @@ import Navlinks from "../subcomponents/navlinks";
 import Modal from "../subcomponents/Modal";
 import { auth } from "../firebase/init.js";
 import { signOut } from "firebase/auth";
+import {onAuthStateChanged} from "firebase/auth";
 
 const Nav = () => {
   const [user, setUser] = useState();
+
+  useEffect(() => {
+    onAuthStateChanged(
+      auth,
+      (user) => {
+        if (user) {
+          let elementSignedIn = document.querySelector(".user__active--alert")
+          elementSignedIn.classList.add("user__alert--show")
+          setTimeout(() => {
+            elementSignedIn.classList.remove("user__alert--show")
+          }, 2000);
+
+       
+        }
+        if (!user) {
+          let elementSignedOut = document.querySelector(".user__inactive--alert")
+          elementSignedOut.classList.add("user__alert--show")
+          setTimeout(() => {
+            elementSignedOut.classList.remove("user__alert--show")
+          }, 2000);
+        }
+      },
+      []
+    );
+  });
+ 
 
   function openSearch() {
     let element = document.querySelector(".interaction__container");
@@ -42,9 +69,20 @@ const Nav = () => {
     }
   }
 
+
+
   return (
     <>
       <nav>
+        <div className="user__active--alert">
+          <FontAwesomeIcon icon="fa-solid fa-check" />
+          <p className="user__alert--para">Signed in</p>
+        </div>
+        <div className="user__inactive--alert">
+          <FontAwesomeIcon icon="fa-solid fa-x" />
+          <p className="user__alert--para">Signed Out</p>
+        </div>
+
         <div className="nav__container--upper">
           <Link to="/">
             <div className="nav__logo--container">
@@ -91,7 +129,6 @@ const Nav = () => {
             </li>
             <li className="interaction report">
               <div className="interaction__dropdown report__dropdown">
-              
                 <ul className="interaction__lists">
                   <li className="interaction__list">
                     <Link className="interaction__title" to="/">
