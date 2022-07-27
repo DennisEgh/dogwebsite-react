@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import hiring from "../assets/hiring.jpg";
 import hiringdog from "../assets/hiringdog.jpg";
 
+
 function Hiring() {
   const [image, setImage] = useState();
   const [imageTwo, setImageTwo] = useState();
