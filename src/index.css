@@ -644,7 +644,7 @@ input[type="password"] {
 }
 .item__button {
   background-color: green;
-  
+  color: white;
   border: none;
   height: 40px;
   width: 200px;
@@ -731,7 +731,7 @@ input[type="password"] {
   justify-content: center;
   align-items: center;
   background-color: green;
-  
+  color: white;
   border: none;
   height: 40px;
   width: 160px;
