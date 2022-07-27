@@ -11,6 +11,9 @@
 }
 
 /* GENERICS */
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: initial!important;
+}
 
 p {
   font-size: 12px;
@@ -1203,4 +1206,146 @@ transform: translateY(-40px);
     line-height: 1.8;
     font-weight: normal;
     text-align: center;
+}
+
+/* DOGS RESOURCE */
+#dogsresource{
+  padding: 70px 0;
+}
+.dogsresource__wrapper{
+  max-width: 1040px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+.dogsresource__columns{
+  display: flex;
+  gap: 20px;
+}
+.dogsresource__column{
+  position: relative;
+  width: 320px;
+  height: 290px;
+}
+.dogsresource__column--anchor{
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 290px;
+  z-index: 10;
+
+}
+.dogsresource__content{
+  width: 320px;
+  height: 290px;
+  overflow: hidden;
+  background: rgba(0, 128, 0, 0.7);
+}
+.dogsresource__img{
+  width: 320px;
+  object-fit: cover;
+  object-position: center;
+  height: 290px;
+  transform: scale(1.15);
+  opacity: 0.7;
+  transition: all 300ms ease;
+}
+.dogsresource__foreground{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 95px;
+  z-index: 3;
+  text-align: center;
+  padding: 35px 10px;
+  box-sizing: border-box;
+  background: rgba(2, 92, 2, 0.441);
+  border-top: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+}
+.dogsresource__img--foreground{
+  position: absolute;
+  z-index: 1;
+}
+.dogsresource__title{
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+.hidden{
+  margin-bottom: 20px;
+}
+
+
+.dogsresource__hidden{
+  
+  position: absolute;
+  text-align: center;
+  top: 22%;
+  width: 100%;
+  padding: 0 30px;
+  transform: translateY(20px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease;
+}
+.dogsresource__para{
+  font-size: 14px;
+  line-height: 1.3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.dog__training:hover .dogsresource__hidden{
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+
+
+}
+.dog__training:hover .dogsresource__foreground{
+  opacity: 0;
+  visibility: hidden;
+}
+.dog__training:hover .dogsresource__img{
+transform: scale(1);
+opacity: 0.5;
+}
+
+.dog__adopt:hover .dogsresource__hidden{
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+
+}
+.dog__adopt:hover .dogsresource__foreground{
+  opacity: 0;
+  visibility: hidden;
+}
+.dog__adopt:hover .dogsresource__img{
+transform: scale(1);
+opacity: 0.5;
+}
+.dog__advocate:hover .dogsresource__hidden{
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+
+}
+.dog__advocate:hover .dogsresource__foreground{
+  opacity: 0;
+  visibility: hidden;
+}
+.dog__advocate:hover .dogsresource__img{
+transform: scale(1);
+opacity: 0.5;
 }
