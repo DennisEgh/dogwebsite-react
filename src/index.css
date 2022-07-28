@@ -1455,3 +1455,18 @@ background-color: lightgray;
 .food:hover {
 transform: translateY(-10px);
 }
+.cart__value{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  left: 26px;
+  top: 12px;
+}
+.cart__length{
+  color: white;
+  position: relative;
+  left: 7px;
+  font-size: 15px;
+}

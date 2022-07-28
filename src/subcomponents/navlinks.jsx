@@ -320,6 +320,9 @@ const Navlinks = () => {
               <div className="shop__container">
                 <div className="shop__content">
                   <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+                  <div className="cart__value">
+                    <p className="cart__length">3</p>
+                  </div>
                   <p className="shop__para">SHOP</p>
                 </div>
               </div>
