@@ -12,7 +12,7 @@ export default function Card({data}) {
         <>
      
      {data.map((data) => (
-        <Link to="/" key={data.id}>
+        <Link to={ `/adopt/${data.id}`} key={data.id}>
 
         <div className="adopt__information--container" >
           <div className="card__img--holder">
