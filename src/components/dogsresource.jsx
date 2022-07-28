@@ -28,7 +28,7 @@ export default function dogsresource() {
             </div>
           </div>
           <div className="dogsresource__column dog__adopt">
-            <Link className="dogsresource__column--anchor" to="/"></Link>
+            <Link className="dogsresource__column--anchor" to="/adopt"></Link>
             <div className="dogsresource__content">
               <img className="dogsresource__img" src={dog2} alt="" />
               <div className="dogsresource__foreground">

@@ -16,7 +16,7 @@ const Navlinks = () => {
           <ul className="nav__link--list">
             <div className="nav__link--wrapper">
               <li className="nav__link adopt">
-                <Link to="/" className="nav__link--anchor">
+                <Link to="/adopt" className="nav__link--anchor">
                   ADOPT
                   <div className="nav__link--square adopt__square"></div>
                 </Link>
