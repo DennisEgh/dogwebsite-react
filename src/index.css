@@ -1578,7 +1578,7 @@ transform: translateY(-10px);
 .alert{
   position: absolute;
  top: 25%;
- background-color: green;
+ background-color: gray;
  border: none;
  border-radius: 10px;
  color: #fff;
