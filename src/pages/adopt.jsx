@@ -43,7 +43,11 @@ export default function Adopt({ data }) {
           </div>
           <div className="adopt__lower">
             {inputValue ? (
-             "null"
+              data
+                .filter((data) => data.name === inputValue)
+                .map((data) => (
+                    <Card data={data} key={data.id} />
+                ))
             ) : (
               <Card data={data} />
             )}
