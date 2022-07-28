@@ -1566,32 +1566,4 @@ transform: translateY(-10px);
     font-size: 20px;
     padding: 12px 24px;
   }
-  #no__user{
-    width: 100%;
-   height: 1450px;
-    position: absolute;
-    backdrop-filter: blur(4px);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-  }
-.alert{
-  position: absolute;
- top: 25%;
- background-color: gray;
- border: none;
- border-radius: 10px;
- color: #fff;
- font-size: 20px;
- padding: 12px 24px;
- box-shadow: 0 3px 3px rgb(0 0 0 / 30%);
- transition: all 300ms ease;
- font-weight: 600;
- cursor: pointer;
-}  
-.alert:hover{
-  transform: translateY(-5px)
-}
-.display__none{
-  display: none !important;
-}
+  
