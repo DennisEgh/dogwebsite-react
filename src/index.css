@@ -762,12 +762,14 @@ input[type="password"] {
   transition: all 500ms ease;
   max-height: 0px;
   z-index: 1;
+  pointer-events: none;
 }
 .adopt:hover .adopt__dropdown,
 .adopt:hover .adopt__square {
   opacity: 1;
   visibility: visible;
   max-height: 300px;
+  pointer-events: auto;
 }
 
 .vet:hover .vet__dropdown,
@@ -775,12 +777,14 @@ input[type="password"] {
   opacity: 1;
   visibility: visible;
   max-height: 300px;
+  pointer-events: auto;
 }
 .pro-res:hover .pro-res__dropdown,
 .pro-res:hover .pro-res__square {
   opacity: 1;
   visibility: visible;
   max-height: 300px;
+  pointer-events: auto;
 }
 
 .nav__link--square {
@@ -1369,7 +1373,7 @@ opacity: 0.5;
   
 }
 .food__img{
-  max-height: 320px;
+max-height: 320px;
 width: 100%;
 }
 .food__title{
@@ -1388,8 +1392,13 @@ width: 100%;
   padding-right: 6px;
   color: #bfbfbf;
 }
+.food__price{
+  font-size: 16px;
+  margin: 8px 0 24px;
+}
 #store__main{
-  background-color: #f8f9fa
+  background-color: #f8f9fa;
+flex: 1;
 }
 .store__container{
   padding: 24px 0;
@@ -1398,7 +1407,7 @@ width: 100%;
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
-  padding: 24px 0;
+  padding: 0 24px;
 }
 .store__header{
   display: flex;
@@ -1426,8 +1435,10 @@ width: 100%;
 .food__all{
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -24px;
   
 }
+
 .skeleton__three--img{
   height: 250px;
 width: 250px;
@@ -1469,4 +1480,118 @@ transform: translateY(-10px);
   position: relative;
   left: 7px;
   font-size: 15px;
+}
+#dogfood__body{
+  background-color: rgba(115,66,214,.1);
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+}
+#dogfood__main{
+  background-color: #f8f9fa;
+  flex: 1 1;
+}
+.dogfood__container{
+  padding: 24px 0;
+
+}
+.dogfood__row{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 24px;
+  width: 100%;
+}
+.dogfood__selected--top{
+  align-items: center;
+  color: #242424;
+  display: flex;
+  font-size: 32px;
+  margin-bottom: 8px;
+  padding: 0 24px;
+}
+.dogfood__link{
+  color: black;
+}
+.dogfood__selected--title--top{
+  margin-bottom: 0;
+  margin-left: 10px;
+  font-size: 32px;
+  text-align: center;
+}
+.dogfood__selected{
+  display: flex;
+}
+.dogfood__selected--figure{
+  align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 16px 32px;
+    width: 40%;
+    
+}
+.dogfood__selected--img{
+  max-height: 500px;
+    max-width: 100%;
+    width: auto;
+    border: 1px lightgray solid;
+}
+.dogfood__selected--description{
+  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    width: 60%;
+  }
+  .dogfood__selected--title{
+    margin-bottom: 8px;
+    font-size: 32px;
+  }
+  .dogfood__summary{
+    margin-bottom: 16px;
+  }
+
+  .dogfood__summary--title{
+     margin-bottom: 8px;
+
+  }
+  .dogfood__summary--para{
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .cart__btn{
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+  #no__user{
+    width: 100%;
+   height: 1450px;
+    position: absolute;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+  }
+.alert{
+  position: absolute;
+ top: 25%;
+ background-color: green;
+ border: none;
+ border-radius: 10px;
+ color: #fff;
+ font-size: 20px;
+ padding: 12px 24px;
+ box-shadow: 0 3px 3px rgb(0 0 0 / 30%);
+ transition: all 300ms ease;
+ font-weight: 600;
+ cursor: pointer;
+}  
+.alert:hover{
+  transform: translateY(-5px)
+}
+.display__none{
+  display: none !important;
 }

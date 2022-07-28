@@ -21,13 +21,13 @@ export default function Food({ dogfood }) {
     <div className="food">
       {img ? (
         <>
-          <Link to="/">
+          <Link to={`/store/${dogfood.id}`}>
             <figure className="food__img--wrapper">
               <img className="food__img" src={dogfood.url} alt="" />
             </figure>
           </Link>
           <div className="food__title">
-            <Link className="food__title--link" to="/">
+            <Link className="food__title--link" to={`/store/${dogfood.id}`}>
               {dogfood.title}
             </Link>
           </div>

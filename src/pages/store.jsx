@@ -1,8 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Food from "../components/ui/food";
+import { auth } from "../firebase/init.js";
+import {onAuthStateChanged} from "firebase/auth";
 
 const Store = ({ dogfood: initialDogfood }) => {
   const [dogfood, setDogfood] = useState(initialDogfood);
+
+  useEffect(() => {
+    onAuthStateChanged(
+      auth,
+      (user) => {
+        if (user) {
+        
+setTimeout(() => {
+  
+  document.querySelector("#no__user").classList.add("display__none")
+}, 2000);
+
+
+
+
+          
+       
+     
+         
+        }
+      if (!user){
+        document.querySelector("#no__user").classList.remove("display__none")
+      }
+      },
+      []
+    );
+  });
+  
 
   function filterFoods(filter) {
     if (filter === "LOW_TO_HIGH") {
@@ -32,7 +62,17 @@ const Store = ({ dogfood: initialDogfood }) => {
     }
   }
 
+  function openLogIn() {
+    document.body.classList.toggle("menu--open");
+  }
+
   return (
+    <>
+    <div id="no__user">
+      <button className="alert" onClick={openLogIn}>
+        Please create an account to access our store
+      </button>
+    </div>
     <div className="store__body">
       <main id="store__main">
         <div className="section">
@@ -63,6 +103,7 @@ const Store = ({ dogfood: initialDogfood }) => {
         </div>
       </main>
     </div>
+    </>
   );
 };
 
