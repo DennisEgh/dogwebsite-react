@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/nav";
 import Store from "./pages/store";
 import Footer from "./components/footer"
+import { dogfoods } from "./data.js"
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
       <div className="App">
         <Nav />
         <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/store" element={<Store />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/store"  element={<Store dogfood={dogfoods}/>} />
         </Routes>
         <Footer />
       </div>

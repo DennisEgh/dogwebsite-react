@@ -1,4 +1,4 @@
-export const dogfood = [
+export const dogfoods = [
 {
 id: 1,
 title: "Purenatural Puppy Chicken",
